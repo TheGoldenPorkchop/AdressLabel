@@ -2,12 +2,12 @@
 'Spring 2025
 'RCET2265
 'Adress Label
-'Link
+'https://github.com/TheGoldenPorkchop/AdressLabel/tree/main
 Option Strict On
 Option Explicit On
 
 
-Public Class AdressLabel
+Public Class AdressLabelForm
     Sub SetDefaults()
         FirstNameTextBox.Text = ""
         LastNameTextBox.Text = ""
