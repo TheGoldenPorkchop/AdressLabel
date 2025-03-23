@@ -22,9 +22,10 @@ Partial Class AdressLabelForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.FirstNameTextBox = New System.Windows.Forms.TextBox()
         Me.LastNameTextBox = New System.Windows.Forms.TextBox()
-        Me.StreetAdressTextBox = New System.Windows.Forms.TextBox()
+        Me.StreetAddressTextBox = New System.Windows.Forms.TextBox()
         Me.CityTextBox = New System.Windows.Forms.TextBox()
         Me.StateTextBox = New System.Windows.Forms.TextBox()
         Me.ZipTextBox = New System.Windows.Forms.TextBox()
@@ -40,6 +41,7 @@ Partial Class AdressLabelForm
         Me.ExitButton = New System.Windows.Forms.Button()
         Me.OutputGroupBox = New System.Windows.Forms.GroupBox()
         Me.DisplayLabel = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.InputGroupBox.SuspendLayout()
         Me.OutputGroupBox.SuspendLayout()
         Me.SuspendLayout()
@@ -50,6 +52,7 @@ Partial Class AdressLabelForm
         Me.FirstNameTextBox.Name = "FirstNameTextBox"
         Me.FirstNameTextBox.Size = New System.Drawing.Size(158, 22)
         Me.FirstNameTextBox.TabIndex = 0
+        Me.ToolTip1.SetToolTip(Me.FirstNameTextBox, "Enter your First Name")
         '
         'LastNameTextBox
         '
@@ -57,13 +60,15 @@ Partial Class AdressLabelForm
         Me.LastNameTextBox.Name = "LastNameTextBox"
         Me.LastNameTextBox.Size = New System.Drawing.Size(158, 22)
         Me.LastNameTextBox.TabIndex = 1
+        Me.ToolTip1.SetToolTip(Me.LastNameTextBox, "Enter your Last Name")
         '
-        'StreetAdressTextBox
+        'StreetAddressTextBox
         '
-        Me.StreetAdressTextBox.Location = New System.Drawing.Point(19, 149)
-        Me.StreetAdressTextBox.Name = "StreetAdressTextBox"
-        Me.StreetAdressTextBox.Size = New System.Drawing.Size(158, 22)
-        Me.StreetAdressTextBox.TabIndex = 2
+        Me.StreetAddressTextBox.Location = New System.Drawing.Point(19, 149)
+        Me.StreetAddressTextBox.Name = "StreetAddressTextBox"
+        Me.StreetAddressTextBox.Size = New System.Drawing.Size(158, 22)
+        Me.StreetAddressTextBox.TabIndex = 2
+        Me.ToolTip1.SetToolTip(Me.StreetAddressTextBox, "Enter your Street Address")
         '
         'CityTextBox
         '
@@ -71,6 +76,7 @@ Partial Class AdressLabelForm
         Me.CityTextBox.Name = "CityTextBox"
         Me.CityTextBox.Size = New System.Drawing.Size(100, 22)
         Me.CityTextBox.TabIndex = 3
+        Me.ToolTip1.SetToolTip(Me.CityTextBox, "Enter your City")
         '
         'StateTextBox
         '
@@ -78,6 +84,7 @@ Partial Class AdressLabelForm
         Me.StateTextBox.Name = "StateTextBox"
         Me.StateTextBox.Size = New System.Drawing.Size(100, 22)
         Me.StateTextBox.TabIndex = 4
+        Me.ToolTip1.SetToolTip(Me.StateTextBox, "Enter your State")
         '
         'ZipTextBox
         '
@@ -85,6 +92,7 @@ Partial Class AdressLabelForm
         Me.ZipTextBox.Name = "ZipTextBox"
         Me.ZipTextBox.Size = New System.Drawing.Size(100, 22)
         Me.ZipTextBox.TabIndex = 5
+        Me.ToolTip1.SetToolTip(Me.ZipTextBox, "Enter your Zip Code")
         '
         'FirstNameLabel
         '
@@ -109,9 +117,9 @@ Partial Class AdressLabelForm
         Me.StreetAdressLabel.AutoSize = True
         Me.StreetAdressLabel.Location = New System.Drawing.Point(16, 130)
         Me.StreetAdressLabel.Name = "StreetAdressLabel"
-        Me.StreetAdressLabel.Size = New System.Drawing.Size(88, 16)
+        Me.StreetAdressLabel.Size = New System.Drawing.Size(96, 16)
         Me.StreetAdressLabel.TabIndex = 8
-        Me.StreetAdressLabel.Text = "Street Adress"
+        Me.StreetAdressLabel.Text = "Street Address"
         '
         'CityLabel
         '
@@ -148,7 +156,7 @@ Partial Class AdressLabelForm
         Me.InputGroupBox.Controls.Add(Me.StateLabel)
         Me.InputGroupBox.Controls.Add(Me.LastNameTextBox)
         Me.InputGroupBox.Controls.Add(Me.CityLabel)
-        Me.InputGroupBox.Controls.Add(Me.StreetAdressTextBox)
+        Me.InputGroupBox.Controls.Add(Me.StreetAddressTextBox)
         Me.InputGroupBox.Controls.Add(Me.StreetAdressLabel)
         Me.InputGroupBox.Controls.Add(Me.CityTextBox)
         Me.InputGroupBox.Controls.Add(Me.LastNameLabel)
@@ -207,7 +215,7 @@ Partial Class AdressLabelForm
         Me.DisplayLabel.Size = New System.Drawing.Size(0, 22)
         Me.DisplayLabel.TabIndex = 0
         '
-        'AdressLabel
+        'AdressLabelForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -217,8 +225,8 @@ Partial Class AdressLabelForm
         Me.Controls.Add(Me.ClearButton)
         Me.Controls.Add(Me.DisplayButton)
         Me.Controls.Add(Me.InputGroupBox)
-        Me.Name = "AdressLabel"
-        Me.Text = "Form1"
+        Me.Name = "AdressLabelForm"
+        Me.Text = "Address Form"
         Me.InputGroupBox.ResumeLayout(False)
         Me.InputGroupBox.PerformLayout()
         Me.OutputGroupBox.ResumeLayout(False)
@@ -229,7 +237,7 @@ Partial Class AdressLabelForm
 
     Friend WithEvents FirstNameTextBox As TextBox
     Friend WithEvents LastNameTextBox As TextBox
-    Friend WithEvents StreetAdressTextBox As TextBox
+    Friend WithEvents StreetAddressTextBox As TextBox
     Friend WithEvents CityTextBox As TextBox
     Friend WithEvents StateTextBox As TextBox
     Friend WithEvents ZipTextBox As TextBox
@@ -245,4 +253,5 @@ Partial Class AdressLabelForm
     Friend WithEvents ExitButton As Button
     Friend WithEvents OutputGroupBox As GroupBox
     Friend WithEvents DisplayLabel As Label
+    Friend WithEvents ToolTip1 As ToolTip
 End Class

@@ -1,7 +1,7 @@
 ﻿'Angel Nava
 'Spring 2025
 'RCET2265
-'Adress Label
+'Address Label
 'https://github.com/TheGoldenPorkchop/AdressLabel/tree/main
 Option Strict On
 Option Explicit On
@@ -11,7 +11,7 @@ Public Class AdressLabelForm
     Sub SetDefaults()
         FirstNameTextBox.Text = ""
         LastNameTextBox.Text = ""
-        StreetAdressTextBox.Text = ""
+        StreetAddressTextBox.Text = ""
         CityTextBox.Text = ""
         StateTextBox.Text = ""
         ZipTextBox.Text = ""
@@ -50,10 +50,10 @@ Public Class AdressLabelForm
             message &= "City is required" & vbNewLine
             CityTextBox.Focus()
         End If
-        If StreetAdressTextBox.Text = "" Then
+        If StreetAddressTextBox.Text = "" Then
             valid = False
-            message &= "Street Adress is required" & vbNewLine
-            StreetAdressTextBox.Focus()
+            message &= "Street Address is required" & vbNewLine
+            StreetAddressTextBox.Focus()
         End If
 
         If LastNameTextBox.Text = "" Then
@@ -80,7 +80,7 @@ Public Class AdressLabelForm
         completeName = FullName()
         If UserInputIsValid() Then
             coolLabel = completeName & vbNewLine _
-            & StreetAdressTextBox.Text & vbNewLine _
+            & StreetAddressTextBox.Text & vbNewLine _
             & CityTextBox.Text & ", " & StateTextBox.Text & " " & ZipTextBox.Text
             AddToLabel(coolLabel)
         End If
